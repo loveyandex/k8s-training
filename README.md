@@ -2,6 +2,12 @@
 This project aims to deploy a simple project (which is visitor counter) on kubernetes.
 
 ### Deploy steps
+#### all one 
+
+`cd deployment/k8s && kubectl apply -f .`
+
+#### one by one
+
 `kubectl apply -f secret.yaml`
 
 `kubectl apply -f redis-deployment.yaml`
@@ -14,11 +20,8 @@ This project aims to deploy a simple project (which is visitor counter) on kuber
 
 `kubectl apply -f visitors-service.yaml`
 
-### Test
-#### using net-utils
-`kubectl run -i -t net-utils --image=saman2000h/net-utils:1.2`
-
-bash-5.1# `curl visitors-service/api`
+### Test 
+ 
 #### using port-forward
 `kubectl port-forward service/visitors-service 8888:80`
 

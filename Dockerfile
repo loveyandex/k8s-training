@@ -1,6 +1,5 @@
 FROM golang:latest AS build
 
-LABEL maintainer="Saman Hoseini <saman2000hoseini@gmail.com>"
 
 WORKDIR /app
 
